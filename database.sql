@@ -546,13 +546,16 @@ INSERT INTO `turmas` (`id`, `turma`) VALUES
 --
 
 CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id INT(10) UNSIGNED NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
-    setor VARCHAR(50) NOT NULL,
+    admin VARCHAR(120) NOT NULL,
     senha VARCHAR(255) NOT NULL,
-    permissao VARCHAR(255) NOT NULL
-);
+    setor VARCHAR(50) DEFAULT NULL,
+    permissao VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 
 
 
@@ -587,10 +590,6 @@ ALTER TABLE `turmas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT para tabelas despejadas
@@ -605,9 +604,6 @@ ALTER TABLE `sosatraso`
 --
 -- AUTO_INCREMENT de tabela `usuarios`
 --
-ALTER TABLE `usuarios`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

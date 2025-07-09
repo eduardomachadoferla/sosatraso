@@ -11,10 +11,6 @@ include('../includes/header.php');
 
 <div class="bg-white w-full max-w-md mx-auto rounded-lg drop-shadow-lg mt-24 px-4 md:px-10 py-10 h-auto">
 
-    <!-- LOGO DA ESCOLA (opcional) -->
-    <div class="flex justify-center mb-6">
-        <img src="../imagems/logo.png" alt="Logo da Escola" class="h-16 md:h-20">
-    </div>
 
     <h3 class="text-center text-xl font-semibold mb-4">ACESSO RESTRITO</h3>
 
@@ -49,13 +45,20 @@ include('../includes/header.php');
             placeholder="Senha" 
             required>
 
-        <!-- BOTÕES -->
-        <div class="flex flex-col md:flex-row items-center justify-center w-full gap-4 mt-4">
-            <a href="<?php echo BASE_URL; ?>" class="bg-marista text-white px-6 py-2 rounded-lg drop-shadow-lg w-full text-center">Voltar à Home</a>
-            <button type="submit" class="bg-marista text-white px-6 py-2 rounded-lg drop-shadow-lg w-full">
-                ACESSAR RELATÓRIO
-            </button>
-        </div>
+      <!-- BOTÕES -->
+<div class="flex items-center justify-center w-full gap-4 mt-4">
+    <!-- Botão Voltar -->
+    <a href="<?php echo BASE_URL; ?>" 
+       class="w-1/2 bg-gray-400 hover:bg-gray-500 text-white font-semibold px-6 py-2 rounded-lg drop-shadow-md text-center transition duration-200">
+       Voltar à Home
+    </a>
+
+    <!-- Botão Acessar -->
+    <button type="submit" 
+            class="w-1/2 bg-marista hover:bg-blue-800 text-white font-semibold px-6 py-2 rounded-lg drop-shadow-md transition duration-200">
+        ACESSAR RELATÓRIO
+    </button>
+</div>
 
     </form>
 
